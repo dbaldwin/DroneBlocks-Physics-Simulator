@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 namespace DroneBlocks
 {
@@ -15,13 +16,15 @@ namespace DroneBlocks
         [SerializeField] private float yawPower = 4f;
 
         private DroneInputs input;
+
+        private List<IEngine> engines = new List<IEngine>();
         #endregion
 
         #region Main Methods
-        // Start is called before the first frame update
         void Start()
         {
             input = GetComponent<DroneInputs>();
+            engines = GetComponentsInChildren<IEngine>().ToList<IEngine>();
         }
         #endregion
 
@@ -35,7 +38,12 @@ namespace DroneBlocks
 
         private void HandleEngines()
         {
-            rb.AddForce(Vector3.up * (rb.mass * Physics.gravity.magnitude));
+            //rb.AddForce(Vector3.up * (rb.mass * Physics.gravity.magnitude));
+
+            foreach (IEngine engine in engines)
+            {
+                engine.UpdateEngine();
+            }
         }
 
         private void HandleControls()
