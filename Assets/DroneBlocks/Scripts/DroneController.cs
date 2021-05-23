@@ -15,7 +15,7 @@ namespace DroneBlocks
         [SerializeField] private float minMaxRoll = 30f;
         [SerializeField] private float yawPower = 4f;
 
-        private DroneInputs input;
+        private DroneInputs inputs;
 
         private List<IEngine> engines = new List<IEngine>();
         #endregion
@@ -23,7 +23,7 @@ namespace DroneBlocks
         #region Main Methods
         void Start()
         {
-            input = GetComponent<DroneInputs>();
+            inputs = GetComponent<DroneInputs>();
             engines = GetComponentsInChildren<IEngine>().ToList<IEngine>();
         }
         #endregion
@@ -42,7 +42,7 @@ namespace DroneBlocks
 
             foreach (IEngine engine in engines)
             {
-                engine.UpdateEngine();
+                engine.UpdateEngine(rb, inputs);
             }
         }
 

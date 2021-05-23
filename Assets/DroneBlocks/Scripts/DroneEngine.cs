@@ -19,9 +19,14 @@ namespace DroneBlocks
             throw new System.NotImplementedException();
         }
 
-        public void UpdateEngine()
+        public void UpdateEngine(Rigidbody rb, DroneInputs inputs)
         {
-            Debug.Log("Running engine: " + gameObject.name);
+
+            // Divide by 4 because 1/4 engines
+            Vector3 engineForce  = Vector3.zero;
+            engineForce = transform.up * ((rb.mass * Physics.gravity.magnitude) + (inputs.Throttle * maxPower)) / 4f;
+            Debug.Log("Running engine: " + gameObject.name + ":" + engineForce);
+            rb.AddForce(engineForce, ForceMode.Force);
         }
 
         #endregion
