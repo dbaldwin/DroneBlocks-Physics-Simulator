@@ -21,6 +21,7 @@ namespace DroneBlocks
 
         private float finalPitch;
         private float finalRoll;
+        private float yaw;
         private float finalYaw;
         #endregion
 
@@ -55,7 +56,7 @@ namespace DroneBlocks
             // Input is between -1 to 1 to we multiply
             float pitch = inputs.Cyclic.y * minMaxPitch;
             float roll = -inputs.Cyclic.x * minMaxRoll;
-            float yaw = inputs.Pedals * yawPower;
+            yaw += inputs.Pedals * yawPower;
 
             finalPitch = Mathf.Lerp(finalPitch, pitch, Time.deltaTime * lerpSpeed);
             finalRoll = Mathf.Lerp(finalRoll, roll, Time.deltaTime * lerpSpeed);
