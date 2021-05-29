@@ -25,7 +25,7 @@ namespace DroneBlocks
             // Divide by 4 because 1/4 engines
             Vector3 engineForce  = Vector3.zero;
             engineForce = transform.up * ((rb.mass * Physics.gravity.magnitude) + (inputs.Throttle * maxPower)) / 4f;
-            Debug.Log("Running engine: " + gameObject.name + ":" + engineForce);
+            //Debug.Log("Running engine: " + gameObject.name + ":" + engineForce);
             rb.AddForce(engineForce, ForceMode.Force);
         }
 
