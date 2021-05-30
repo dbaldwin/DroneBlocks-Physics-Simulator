@@ -731,9 +731,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weightInLbs: 1
-  minMaxPitch: 30
-  minMaxRoll: 30
+  minMaxPitch: 50
+  minMaxRoll: 50
   yawPower: 4
+  lerpSpeed: 2
 --- !u!54 &1072720033
 Rigidbody:
   m_ObjectHideFlags: 0
