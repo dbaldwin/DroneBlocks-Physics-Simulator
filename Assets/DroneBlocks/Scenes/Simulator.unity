@@ -219,6 +219,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &43304170 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400006, guid: 20cd51a5059c7a64484f9f125ee6c40a, type: 3}
+  m_PrefabInstance: {fileID: 331592822}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &60081420 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400004, guid: 20cd51a5059c7a64484f9f125ee6c40a, type: 3}
@@ -269,6 +274,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxPower: 4
+  propeller: {fileID: 43304170}
+  propellerRotationSpeed: 200
+  propellerDirection: -1
 --- !u!65 &151482923
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -496,6 +504,11 @@ Transform:
   m_Father: {fileID: 2011029442}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!4 &900422437 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400010, guid: 20cd51a5059c7a64484f9f125ee6c40a, type: 3}
+  m_PrefabInstance: {fileID: 331592822}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -640,6 +653,16 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
+--- !u!4 &1045937963 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400008, guid: 20cd51a5059c7a64484f9f125ee6c40a, type: 3}
+  m_PrefabInstance: {fileID: 331592822}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1070499839 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400012, guid: 20cd51a5059c7a64484f9f125ee6c40a, type: 3}
+  m_PrefabInstance: {fileID: 331592822}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1072720028
 GameObject:
   m_ObjectHideFlags: 0
@@ -844,6 +867,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxPower: 4
+  propeller: {fileID: 900422437}
+  propellerRotationSpeed: 200
+  propellerDirection: 1
 --- !u!65 &1262886461
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -936,6 +962,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxPower: 4
+  propeller: {fileID: 1070499839}
+  propellerRotationSpeed: 200
+  propellerDirection: -1
 --- !u!65 &1619031553
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -994,6 +1023,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxPower: 4
+  propeller: {fileID: 1045937963}
+  propellerRotationSpeed: 200
+  propellerDirection: 1
 --- !u!65 &1633982355
 BoxCollider:
   m_ObjectHideFlags: 0
