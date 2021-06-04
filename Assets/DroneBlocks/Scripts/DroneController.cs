@@ -11,8 +11,8 @@ namespace DroneBlocks
 
         #region Variables
         [Header("Control Properties")]
-        [SerializeField] private float minMaxPitch = 50f;
-        [SerializeField] private float minMaxRoll = 50f;
+        [SerializeField] private float minMaxPitch = 30f;
+        [SerializeField] private float minMaxRoll = 30f;
         [SerializeField] private float yawPower = 4f;
         [SerializeField] private float lerpSpeed = 2f;
 

@@ -153,8 +153,8 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "Right Joystick",
-                    "id": "1d71af46-0cfc-44a5-972c-f88c10220c09",
+                    "name": "WebGL",
+                    "id": "a33cf042-331e-47eb-9942-e341dc4c9db2",
                     "path": "2DVector",
                     "interactions": "",
                     "processors": "",
@@ -165,8 +165,8 @@
                 },
                 {
                     "name": "up",
-                    "id": "1305961d-2bb5-4596-854b-3043454b8021",
-                    "path": "<XInputController>/rightStick/up",
+                    "id": "113b1598-aaca-4045-9e39-99383637859f",
+                    "path": "<WebGLGamepad>/rightStick/down",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -176,8 +176,8 @@
                 },
                 {
                     "name": "down",
-                    "id": "fdd30781-87a7-4314-9487-e6e834356e59",
-                    "path": "<XInputController>/rightStick/down",
+                    "id": "d4341f3c-8c98-41e0-b80b-b9814a49a23c",
+                    "path": "<WebGLGamepad>/rightStick/up",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -187,8 +187,8 @@
                 },
                 {
                     "name": "left",
-                    "id": "6aeccbab-a42c-4fe0-9d9a-c21b8247640a",
-                    "path": "<XInputController>/rightStick/left",
+                    "id": "92d23511-9150-4c5b-ba82-22178df9f806",
+                    "path": "<WebGLGamepad>/rightStick/left",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -198,8 +198,8 @@
                 },
                 {
                     "name": "right",
-                    "id": "f3fa6bc2-5308-47d2-94dd-7b2600b420d9",
-                    "path": "<XInputController>/rightStick/right",
+                    "id": "94d86ded-5a63-4acd-a256-6d6b177f95b1",
+                    "path": "<WebGLGamepad>/rightStick/right",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -241,8 +241,8 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "Left Joystick",
-                    "id": "b8704051-feaa-472b-b18d-c9750311687e",
+                    "name": "WebGL",
+                    "id": "dd8f6292-d731-4781-9999-6ee1639a4dbd",
                     "path": "1DAxis",
                     "interactions": "",
                     "processors": "",
@@ -252,8 +252,8 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "negative",
-                    "id": "4c4f17c4-2116-4edd-802e-6a2b42f44b42",
+                    "name": "positive",
+                    "id": "f4312ed0-b0df-49bb-848f-4d7b332b0173",
                     "path": "<Gamepad>/leftStick/down",
                     "interactions": "",
                     "processors": "",
@@ -263,8 +263,8 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "positive",
-                    "id": "7902dae5-f448-42c4-9b70-bf8d4aa8360b",
+                    "name": "negative",
+                    "id": "499afded-4129-4208-88a2-66b3fe0b78d7",
                     "path": "<Gamepad>/leftStick/up",
                     "interactions": "",
                     "processors": "",
