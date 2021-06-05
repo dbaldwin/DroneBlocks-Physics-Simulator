@@ -1,40 +1,38 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace DroneBlocks {
+
+    [RequireComponent(typeof(CameraInputs))]
     public class FollowCam : MonoBehaviour
 
     {
         public Transform target = null;
         public Transform rig = null;
 
-        public float distance = 10f;
-        public float rotationSpeed = 10f;
+        public float distance = 5f;
+        public float rotationSpeed = 100f;
 
         private Vector3 cameraPosition;
         private Vector3 smoothPosition;
         private float smoothTime = 0.125f;
         private float angle;
-        private int camType = 0;
         
-        private void Update()
+        private CameraInputs inputs;
+
+        private void Start() 
         {
-            // if (Input.GetKeyDown("c"))
-            // {
-            //     camType += 1;
-            //     if (camType >= 3)
-            //     {
-            //         camType = 0;
-            //     }
-            // }
+            inputs = GetComponent<CameraInputs>();
         }
 
         private void FixedUpdate()
         {    
-            if (camType == 0) RigCam();
-            else if (camType == 1) TopCam();
-            else if (camType == 2) BackCam();
+            if (inputs.CameraType == 0) RigCam();
+            else if (inputs.CameraType == 1) TopCam();
+            else if (inputs.CameraType == 2) BackCam();
+            else if (inputs.CameraType == 3) FPVCam();
             else RigCam();
         }
 
@@ -52,12 +50,18 @@ namespace DroneBlocks {
 
         private void BackCam()
         {
-            cameraPosition = target.position - (target.forward * distance) + target.up * distance * 0.25f;
+            cameraPosition = target.position - (target.forward * distance) + target.up * distance * 0.1f;
             smoothPosition = Vector3.Lerp(transform.position, cameraPosition, smoothTime);
             transform.position = smoothPosition;
 
             angle = Mathf.Abs(Quaternion.Angle(transform.rotation, target.rotation));
             transform.rotation = Quaternion.RotateTowards(transform.rotation, target.rotation, (rotationSpeed + angle) * Time.deltaTime);
+        }
+
+        private void FPVCam()
+        {
+            transform.position = target.position + target.up;
+            transform.rotation = target.rotation * Quaternion.Euler(0, 0, 0);
         }
 
     }
